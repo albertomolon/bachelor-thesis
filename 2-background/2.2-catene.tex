@@ -1,0 +1,25 @@
+Una \textit{\textbf{catena di Markov}} \`e un processo stocastico avente una proprietà caratterizzante, chiamata \textit{proprietà di Markov}~\cite{libro:tele}.  Il processo, che può essere a tempo continuo o a tempo discreto, \`e determinato da una successione di variabili aleatorie $\{X_w\}$, che prendono valori in un insieme $S$, detto \textit{spazio degli stati}. Esso può essere finito o al più infinito numerabile. 
+L’indice $w$ di $\{X_w\}$ indica il \textit{tempo}, mentre i possibili valori della successione prendono il nome di \textit{stati} del processo.
+Al trascorrere del tempo, il processo può “saltare“ da uno stato all’altro. Se ad un certo istante $w$ si trova in uno stato $i$ ed all’istante successivo ($w+1$ se \`e discreto oppure $w+u$ se \`e continuo) si trova in uno stato $j \neq i$, si dirà che c’\`e stata una \textit{transizione}.
+Siccome i processi coinvolti sono stocastici, i calcoli coinvolgeranno le probabilità. Le più importanti sono le cosiddette \textit{probabilità di transizione}. Per il \textit{tempo discreto} valgono:
+\begin{equation}P_{i,j}(k)=P[X_{n+k}=j | X_n=i]\end{equation} 
+che indica la probabilità di trovarsi nello stato $j$ al tempo $n+k$ sapendo di essere nello stato $i$ al tempo $n$. In questo caso, $k$ indica il \textit{numero di step} per andare dallo stato $i$ allo stato $j$.\\
+Per il \textit{tempo continuo} invece, valgono:
+\begin{equation}P_{i,j}(u)=P[X(t_0+u)=j | X(t_0)=i]\end{equation} 
+che indica la probabilità di trovarsi nello stato $j$ al tempo $t_0+u$ sapendo di essere nello stato $i$ al tempo $t_0$. In questo caso, $u$ indica l'\textit{intervallo temporale} per andare dallo stato $i$ allo stato $j$.\\
+Si dirà che queste probabilità sono $stazionarie$ se dipendono solo dalla lunghezza temporale $k$ o $h$ (a seconda che il tempo sia discreto o continuo) e non dai singoli istanti $n$ o $t_0$. Le relative catene di Markov, invece, si diranno \textit{omogenee}. I processi che si andranno a sviluppare nei capitoli successivi, sono tutti di questo tipo.
+
+%**************************************************************
+\subsection{Proprietà di Markov}
+La proprietà di Markov per un processo a tempo discreto \`e sintetizzata nella seguente formula:
+\begin{equation}\label{eq:pr1}P[X_{n_k}=\sigma_k | X_{n_{k-1}}=\sigma_{k-1},\dots,X_{n_0}=\sigma_0]=P[X_{n_k}=\sigma_k | X_{n_{k-1}}=\sigma_{k-1}].\end{equation}
+Mentre, per un processo a tempo continuo, vale:
+\begin{equation}\label{eq:pr2}P[X_{t_n}=\sigma_n | X_{t_{n-1}}=\sigma_{n-1},\dots,X_{t_0}=\sigma_0]=P[X_{t_n}=\sigma_n | X_{t_{n-1}}=\sigma_{n-1}],\end{equation}
+dove i $\sigma_i$ sono elementi appartenenti allo spazio di stato $S=\{0,1,2,\dots\}$.\\
+L’interpretazione della proprietà di Markov \`e la seguente. Consideriamo:
+\begin{itemize}
+\item l'istante $n_{k-1}$ (o nel continuo $t_{n-1}$) come il ``presente" del processo;
+\item gli istanti $n_0, n_1, \dots, n_{k-2}$ (o nel continuo $t_0, t_1, \dots, t_{n-2}$) come il ``passato" del processo;
+\item l'istante $n_k$ (o nel continuo $t_n$) come il ``futuro" del processo.
+\end{itemize}
+Dunque, le equazioni~\eqref{eq:pr1} e~\eqref{eq:pr2} ci dicono dice che la conoscenza del ``passato" del processo non predice la sua evoluzione futura dallo stato $\sigma_{k-1}$ in cui si trova al momento. Perciò, \`e possibile ``dimenticarsi" della storia passata, conoscendo esclusivamente lo stato presente.

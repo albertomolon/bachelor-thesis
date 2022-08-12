@@ -1,0 +1,19 @@
+%definisco il layout dell'abstract
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+
+%Genero l'ambiente per l'abstract
+\newcommand\summaryname{Sommario}
+\newenvironment{Sommario}%
+    {\begin{center}%
+    \bfseries{\summaryname} \end{center}}
+    
+\begin{Sommario}
+\begin{changemargin}{0.3cm}{0.3cm}
+%Inserire abstract. I margini nell'abstract sono stati ridotti di un centimetro. In caso non si volesse questa riduzione rimuovere \textit{changemargin}.
+Negli ultimi anni c'\`e stato uno sviluppo della tecnologia blockchain, che ha portato molti sviluppatori a creare nuove monete virtuali. Il processo di mining \`e il processo più importante che sta alla base del funzionamento di una criptovaluta, tramite il quale si creano nuove criptomonete e si confermano blocchi di transazioni.
+In questa tesi si studiano i comportamenti statistici dei tempi di tale processo utilizzando la teoria delle code. Si approfondiranno due modelli di code e la trattazione si baserà anche sugli articoli presenti in letteratura. 
+Lo studio della statistica dei tempi e degli aspetti che la influenzano, sono elementi importanti per capire quali sono i punti di forza e debolezza dei vari modelli. 
+I risultati ottenuti, mostrano che si ottengono tempi bassi se la transazione ha una commissione alta o un pagamento elevato.
+\end{changemargin}
+\end{Sommario}

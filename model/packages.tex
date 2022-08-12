@@ -1,0 +1,85 @@
+%************
+%* packages *
+%************
+
+%Codifica
+\usepackage[utf8]{inputenc}
+
+%Lingua, sostituire italian con english nel caso in cui la tesi sia scritta in inglese
+\usepackage[italian]{babel}
+
+%Titoli
+\usepackage{titlesec}
+
+%Pacchetto per definire layout di pagina
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+\usepackage[left=3cm, right=3cm, bottom=3cm]{geometry}
+
+%Spazia linee all'interno del documento
+\usepackage{setspace}
+
+%Listati di codice
+\usepackage{verbatim}
+\usepackage{listings}
+
+%Didascalie immagini
+\usepackage[hang,small,sf,font=small, labelfont=bf]{caption}
+\usepackage{subcaption}
+
+%Inclusione immagini
+\usepackage{graphicx}
+
+%Impostazioni note a piè pagina
+\usepackage[stable]{footmisc}
+
+%Citazioni e riferimenti a label
+\usepackage[english]{varioref}
+
+%Colori
+\usepackage[usenames]{color}
+\usepackage{xcolor}
+\usepackage{colortbl}
+
+%Crea link ipertestuali
+\usepackage[hidelinks]{hyperref}
+
+\hypersetup{
+            pdfauthor={Alberto Molon},
+            pdftitle={Modelli di Code per la Descrizione del Processo di Mining di una Criptovaluta},
+            pdfsubject={Information Security},
+            pdfkeywords={Information Security, Teoria delle Code},
+            pdfproducer={LaTex}
+}
+
+%Formattazione url
+\usepackage{url}
+
+%Inserimento formule
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{amssymb,amsthm}    % matematica
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema}
+
+%Usato per diminuire spazio tra la parte superiore della pagina e l'indice
+\usepackage{tocloft}
+
+%Per avere tabelle più verso sx (soprattutto per quelle larghe)
+\usepackage{changepage}
+
+\usepackage{tabularx}
+
+\usepackage[backend=biber,style=numeric,hyperref,backref]{biblatex}
+                                        % eccellente pacchetto per la bibliografia; 
+                                        % produce uno stile di citazione autore-anno; 
+                                        % lo stile "numeric-comp" produce riferimenti numerici
+                                        % per includerlo nel documento bisogna:
+                                        % 1. compilare una prima volta Tesi.tex;
+                                        % 2. eseguire da terminale: biber Tesi
+                                        % 3. compilare ancora Tesi.tex.
+\bibliography{bibliografia}
+
+                                        
+                                        
+

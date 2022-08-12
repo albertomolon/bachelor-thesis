@@ -1,0 +1,79 @@
+\input{model/Modello_Tesi}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\includegraphics[scale=0.1]{immagini/logo.png}
+\includegraphics[scale=0.98]{immagini/logo_dei.png}\\
+
+%Per il frontespizio del dipartimenti di Ing. dell'Informazione commentare le riga precedente e decommentare la successiva
+%\includegraphics[scale=0.2]{immagini/logo_unipd.png} \hfill \includegraphics[scale=0.2]{immagini/logo_dei.png}\\
+\vspace{0.8cm}
+\textsc{\LARGE Universit\`{a} degli Studi di Padova}\\
+\vspace{0.45cm}
+\textsc{\large Dipartimento di Ingegneria dell'Informazione}\\
+\vspace{0.4cm}
+\textsc{\large Corso di Laurea in}\\
+\textsc{\large Ingegneria dell'Informazione}\\
+\vfill
+% Title
+{ \LARGE \bfseries Modelli di Code per la Descrizione del Processo di Mining di una Criptovaluta}\\
+\vfill
+\textit{\large Relatore:} \hfill \textit{\large Laureando:}\\
+\textsc{\large Prof. Nicola Laurenti} \hfill \textsc{\large{Alberto Molon}}\\
+\hfill \textsc{1136509}\\
+
+\vfill
+% Bottom of the page
+{\large Anno Accademico 2018/2019} %25/09/2019
+\end{center}
+\end{titlepage}
+
+\thispagestyle{empty} %pagina bianca dopo il titolo
+\cleardoublepage
+
+\pagenumbering{roman} %numerazione romana per l'indice, l'abstract e i ringraziamenti
+\thispagestyle{empty}
+
+\clearpage{\pagestyle{plain}\cleardoublepage}
+\input{abstract.tex}
+
+\clearpage{\pagestyle{plain}\cleardoublepage}
+\setlength{\cftbeforetoctitleskip}{-0.5em}
+\large \tableofcontents %Indice
+
+\clearpage{\pagestyle{plain}\cleardoublepage} %Numerazione araba per i capitoli
+\pagenumbering{arabic}
+
+\clearpage{\pagestyle{plain}\cleardoublepage} %Comando per iniziare il capitolo su pagina dispari
+\chapter{Introduzione} %Nome capitolo
+\label{cap:introduzione} %Label per creare riferimenti al capitolo
+\input{1-intro.tex} %File in cui verrà scritto il capitolo
+
+\clearpage{\pagestyle{plain}\cleardoublepage} %Comando per iniziare il capitolo su pagina dispari
+\chapter{Conoscenze preliminari} %Nome capitolo
+\label{cap:con-prel} %Label per creare riferimenti al capitolo
+\input{2-background.tex} %File in cui verrà scritto il capitolo
+
+\clearpage{\pagestyle{plain}\cleardoublepage} %Comando per iniziare il capitolo su pagina dispari
+\chapter{Analisi del modello M/G/1} %Nome capitolo
+\label{cap:MG1} %Label per creare riferimenti al capitolo
+\input{3-MG1.tex} %File in cui verrà scritto il capitolo
+
+\clearpage{\pagestyle{plain}\cleardoublepage} %Comando per iniziare il capitolo su pagina dispari
+\chapter{Analisi del modello M/M/1} %Nome capitolo
+\label{cap:MM1} %Label per creare riferimenti al capitolo
+\input{4-MM1.tex} %File in cui verrà scritto il capitolo
+
+\clearpage{\pagestyle{plain}\cleardoublepage} %Comando per iniziare il capitolo su pagina dispari
+\chapter{Conclusioni} %Nome capitolo
+\label{cap:conclusioni} %Label per creare riferimenti al capitolo
+\input{5-conclusioni.tex} %File in cui verrà scritto il capitolo
+
+\clearpage{\pagestyle{plain}\cleardoublepage}
+\nocite{*}
+\printbibliography[heading=bibintoc]
+
+
+\end{document}
